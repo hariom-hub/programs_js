@@ -1,4 +1,4 @@
-/* let letters=prompt("enter a word: ");
+ let letters=prompt("enter a word: ");
 function upperCase(letters)
 {
     let upper=letters.toUpperCase();

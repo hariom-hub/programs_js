@@ -1,0 +1,29 @@
+div{
+    height:100px;
+    width:500px;
+    border:2px solid black;
+    text-align: center;
+    margin:auto;
+    box-shadow:3px 3px 3px gray;
+    font:larger arial;
+}
+body{
+    text-align: center;
+}
+button{
+    height:40px;
+    width:80px;
+    border-radius:10px;
+    background-color:rgb(9, 9, 32);
+    color:White;
+    border: 3px solid gold;
+    box-shadow:3px 3px 3px rgb(24, 24, 29);
+    font-family:arial;
+}
+h3{
+    box-shadow:2px 2px 2px gray;
+    display:inline-block;
+    background-color: black;
+    color:white;
+}
+

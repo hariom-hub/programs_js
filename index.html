@@ -1,15 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM EVENTS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Multi-level Navbar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .sub-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 0;
+            left: 100%;
+            min-width: 160px;
+        }
+
+        .sub-dropdown-content a {
+            display: block;
+        }
+
+        .sub-dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .sub-dropdown:hover .sub-dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
-    <h3>Generate a random color</h3><br>
-    <button>Generate color</button><br><br><br>
-    <div>This is your new color</div><br>
-    <script src="file.js"></script>
+    <nav class="navbar">
+        <ul>
+            <li class="dropdown">
+                <a href="#">Home</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Mobile Number</a></li>
+                    <li><a href="#">Gmail</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Hariom</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Service 1</a></li>
+                    <li class="sub-dropdown">
+                        <a href="#">Service 2</a>
+                        <ul class="sub-dropdown-content">
+                            <li><a href="#">Sub-service 1</a></li>
+                            <li><a href="#">Sub-service 2</a></li>
+                            <li><a href="#">Sub-service 3</a></li>
+                            <li><a href="#">Sub-service 4</a></li>
+                            <li><a href="#">Sub-service 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Service 3</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">About</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">IIT</a></li>
+                    <li><a href="#">NIT</a></li>
+                    <li><a href="#">IIM</a></li>
+                    <li><a href="#">NSIT</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Contact</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Hariom</a></li>
+                    <li><a href="#">Gaurisha</a></li>
+                    <li><a href="#">Shreesha</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </body>
+
 </html>
